@@ -17,4 +17,4 @@ Se o teu servidor é ESX troca a função do client.lua para isto. Se é QBCore 
 ###########################ESX######################################
 
 
-Uso gratuito, sem retirar os direitos do mesmo.
+Uso gratuito, sem retirar os direitos.
