@@ -1,0 +1,108 @@
+
+*{
+    margin-left: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: rgb(146, 146, 146);
+
+    font-family: 'Liberation Mono', sans-serif  !important;
+    font-size: 1.5rem;
+}
+
+
+
+
+video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+p{
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    color: aliceblue;
+    top: 90vh;
+
+}
+
+.tecla{
+    
+    position: relative;
+    height: 20px;
+    width: 55px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: solid 2px white;
+    color: white;
+}
+.teclas{
+    
+  position: absolute;
+  width: 100px;
+  top: 85vh;
+
+  
+  color: white;
+}
+
+
+
+
+
+
+.container2{
+  
+
+  position: relative;
+  display: inline-block;
+  
+
+  top: 87vh;
+  left: 95vw;
+  height: 40px;
+}
+
+.container2 .toggle{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 34px;
+  background-size: 65px;
+  background-image: url(../img/english.png);
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+.container2 .toggle.active{
+  background-size: 65px;
+  background-image: url(../img/portugal.png);
+}
+
+.container2 .toggle.active .toggle-button{
+  left: 30px;
+}
+
+.container2 .toggle .toggle-button{
+
+  position: relative;
+  top: 5px;
+  left: 5px;
+  width: 26px;
+  height: 26px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+
+}
+
+

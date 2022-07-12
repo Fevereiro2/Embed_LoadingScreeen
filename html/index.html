@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+        <script src="assets/js/app.js" ></script>
+        <link href="http://fonts.cdnfonts.com/css/liberation-mono" rel="stylesheet">
+
+    </head>
+
+    <audio autoplay loop id="audio" src="assets/img/music.mp3"></audio>
+    <body>
+        <div class="container">
+            <video id="video" width="1921" height="1081" autoplay loop muted>
+                <source type="video/mp4" src="assets/img/freestockvideo.mp4">
+                
+            </video>  
+
+            <p class="text">Click <button class="tecla">Space</button> to pause the music</p>
+            
+
+            <div class="container2">
+                <div class="toggle">
+                    <div class="toggle-button" onclick="Animationtogle()"></div>
+                </div>
+                
+            </div>
+            
+
+
+
+
+            <img class="teclas" src="assets/img/whiteembed.png">
+
+
+        </div>
+
+        <script>
+            var play = false;
+            var vid = document.getElementById("audio");
+            vid.volume = 0.1;
+            window.addEventListener('keyup', function(e)
+            {
+                if (e.which == 69){
+                    vid.volume = Math.min(vid.volume + 0.1,1);
+                } else if(e.which == 65){
+                    vid.volume = Math.max(vid.volume - 0.1,0);
+                };
+            });
+    
+            var audio = document.querySelector('audio');
+                if (audio) {
+                    window.addEventListener('keydown', function (event) {
+                        var key = event.which || event.keyCode;
+    
+                    if (key === 32) { // spacebar
+    
+                    event.preventDefault();
+    
+                    audio.paused ? audio.play() : audio.pause();
+            
+                    }
+                    
+        
+                });
+            }
+            let toggle = document.querySelector(".toggle");
+            let text = document.querySelector(".text");
+
+            function Animationtogle(){
+                toggle.classList.toggle("active");
+
+                if (toggle.classList.contains("active")){
+                    text.innerHTML = "Clica <button class='tecla'>Space</button> para parar a musica";
+                }
+                else
+                {
+                    text.innerHTML = "Click <button class='tecla'>Space</button> to pause the music";
+                }
+            }
+
+
+        </script>
+    </body>
+</html>
